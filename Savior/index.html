@@ -41,9 +41,44 @@
 
         </div>
     </nav>
+    
+    <!--slideshow container-->
+    <div class="slideshow__container">
 
+        <!--Imagens em modo tela cheia-->
+        <div class="mySlides fade">
+            <img src="img/banner1.png" alt="banner1" style="width: 100%;">
+        </div>
+        
+        <div class="mySlides fade">
+            <img src="img/banner2.png" alt="banner2" style="width: 100%;">
+        </div>
+        
+        <div class="mySlides fade">
+            <img src="img/banner3.png" alt="banner3" style="width: 100%;">
+        </div>
+
+        <!--Botão de next e previous-->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+
+    <!-- Os pontos/circulos-->
+    <div style="text-align: center;">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <footer class="baixo">
+        <div>
+            <a href="https://github.com/VictorPera/projeto-savior">kkkk</a>
+        </div>
+    </footer>
 </body>
 
-<script src="js/sla.js"></script>
+<script src="js/banner.js"></script>
 
 </html>

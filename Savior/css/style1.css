@@ -26,10 +26,10 @@
     height: 80px;
     width: 100%;
     max-width: 1300px;
-    margin: 1px 0px 1px -150px; 
-        /*cima esquerda baixo direita*/
-    padding: 1px 1px -1px -1px;
-    
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 30px;
+    padding-left: 30px;
 }
 
 #navbar__logo
@@ -101,5 +101,80 @@
     position: sticky;
     top: 0;
     z-index: 999;
+}
 
+/*Slideshow Container*/
+.slideshow__container
+{
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/*Escondendo as imagens pelo default*/
+.mySlides
+{
+    display:none;
+}
+
+/*Botões de próximo e anterior*/
+.prev, .next
+{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0,6s ease;
+    border-radius: 0    3px     3px    0;
+               /*cima esquerda baixo direita*/
+    user-select: none;           
+}
+
+/*Posicionando o "botão de próximo" na direita*/
+.next
+{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/*No hover, iremos adicionar uma cor preta com um pouco de transparência*/
+.prev:hover, .next:hover
+{
+    background-color: rgba(0,0,0,0.8);
+}
+
+/*Os pontos/bullets/indicadores*/
+.dot
+{
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;  
+}
+
+.active, .dot:hover
+{
+    background-color: #717171;
+}
+
+/*Animação de fade*/
+.fade
+{
+    animation-name: fade;
+    animation-duration: 1,5s;
+}
+
+@keyframes fade
+{
+    from {opacity: .4}
+    to {opacity: 1}
 }
