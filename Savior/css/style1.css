@@ -8,12 +8,12 @@
 
 .navbar
 {
-    background-color: black;
-    height: 80px;
+    background-color: #ea748e;
+    height: 5em;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: px;
+    font-size: 1,5em;
     position: sticky;
     top: 0;
     z-index: 999;
@@ -23,23 +23,23 @@
 {
     display: flex;
     justify-content: space-between;
-    height: 80px;
+    height: 5em;
     width: 100%;
     max-width: 1300px;
     margin-right: auto;
     margin-left: auto;
-    padding-right: 30px;
-    padding-left: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 #navbar__logo
 {
-    color: antiquewhite;
+    color: #fffec8;
     display: flex;
     align-items: center;
     cursor: pointer;
     text-decoration: none;
-    font-size: 2em;
+    font-size: 34px;
 }
 
 .navbar__menu
@@ -57,7 +57,7 @@
 
 .navbar__links
 {
-    color: #fff;
+    color: #fffec8;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -87,94 +87,105 @@
     border: none;
     outline: none;
     border-radius: 4px;
-    background:#fff;
-    color: #000; 
+    background:#fe9d97;
+    color: #fffec8; 
 }
-.baixo
+
+.main
 {
-    background-color: black;
-    height: 80px;
-    display: flex;
-    justify-content: center;
+    background-color: #fdfdd3;
+}
+
+.main__container
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;/*fita de alinhar os bgl que nem o word,porém esse é na horizontal*/
+    justify-self: center;/*fita de alinhar os bgl que nem o word,porém esse é na vertical*/
+    margin: 0 auto;
+    height: 90vh;/*metade de 180px o vh*/
+    background-color: #fffec8;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.main__content 
+{
+    width: 100%;
+}
+
+#main__img
+{
     align-items: center;
+    height: 900px;
+    width: 400px;
+    
+}
+
+.main__content h1
+{
+    font-size: 3.5rem;
+    color: #668137;
+}
+
+.text-highlight
+{
+    color: #95c243;
+}
+
+.main__content p
+{
+    font-size:2.5rem;
+    margin-top: 8px;
+    font-weight: 100;
+    color: #707766;
+}
+
+.main__btn
+{
     font-size: 1rem;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-}
-
-/*Slideshow Container*/
-.slideshow__container
-{
-    max-width: 1000px;
+    padding: 14px 32px;
+    background-color: #bbce79;
+    border: none;
+    border-radius: 4px;
+    margin-top: 2rem;
+    cursor: pointer;
     position: relative;
-    margin: auto;
+    transition: all 0.35s;
+    outline: none;
 }
 
-/*Escondendo as imagens pelo default*/
-.mySlides
+.main__btn a
 {
-    display:none;
+    position:relative;
+    z-index: 2;
+    color: #000;
+    text-decoration: none;
 }
 
-/*Botões de próximo e anterior*/
-.prev, .next
+.main__btn:after
 {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0,6s ease;
-    border-radius: 0    3px     3px    0;
-               /*cima esquerda baixo direita*/
-    user-select: none;           
+    position:absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #64742d;
+    transition: all 0.35s;
+    border-radius: 4px;
 }
 
-/*Posicionando o "botão de próximo" na direita*/
-.next
+.main__btn:hover:after
 {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+    width: 100%;
 }
 
-/*No hover, iremos adicionar uma cor preta com um pouco de transparência*/
-.prev:hover, .next:hover
+.main__img--container
 {
-    background-color: rgba(0,0,0,0.8);
+    text-align: center;
 }
 
-/*Os pontos/bullets/indicadores*/
-.dot
-{
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;  
-}
-
-.active, .dot:hover
-{
-    background-color: #717171;
-}
-
-/*Animação de fade*/
-.fade
-{
-    animation-name: fade;
-    animation-duration: 1,5s;
-}
-
-@keyframes fade
-{
-    from {opacity: .4}
-    to {opacity: 1}
-}
